@@ -3,7 +3,7 @@ import Paragraph from "@/components/Paragraph";
 import Heading from "@/components/Heading";
 import { BioSection, BioYear } from "@/components/Bio";
 import NextLink from "next/link";
-import { IoLogoGithub } from "react-icons/io5";
+import { IoLogoGithub, IoLogoTwitter } from "react-icons/io5";
 
 export default function Home() {
   return (
@@ -66,6 +66,16 @@ export default function Home() {
               passHref
             >
               <IoLogoGithub className="mr-2" /> @nakamurau1
+            </NextLink>
+          </li>
+          <li className="mb-3">
+            <NextLink
+              href="https://twitter.com/NakamuraYuich1"
+              className="flex items-center text-blue-300 hover:text-blue-600"
+              target="_blank"
+              passHref
+            >
+              <IoLogoTwitter className="mr-2" /> @NakamuraYuich1
             </NextLink>
           </li>
         </ul>
