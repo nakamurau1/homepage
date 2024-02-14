@@ -4,13 +4,27 @@ import Heading from "@/components/Heading";
 import { BioSection, BioYear } from "@/components/Bio";
 import NextLink from "next/link";
 import { IoLogoGithub, IoLogoTwitter } from "react-icons/io5";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex flex-col mx-auto px-4 sm:px-6 lg:px-8 max-w-lg">
-      <div>
-        <h2 className="text-2xl font-bold font-heading">Yuichi Nakamura</h2>
-        <p>Software Engineer</p>
+      <div></div>
+      <div className="flex flex-col md:flex-row">
+        <div className="flex-grow">
+          <h2 className="text-3xl font-bold font-heading">Yuichi Nakamura</h2>
+          <p>Software Engineer</p>
+        </div>
+        <div className="flex-shrink-0 mt-4 md:mt-0 md:ml-6 text-center">
+          <div className="inline-block border-white border-opacity-80 border-2 rounded-full overflow-hidden w-24 h-24">
+            <Image
+              src="/images/profile.jpg"
+              alt="Profile image"
+              width="100"
+              height="100"
+            />
+          </div>
+        </div>
       </div>
       <Section delay={0.1}>
         <Heading>About Me</Heading>
