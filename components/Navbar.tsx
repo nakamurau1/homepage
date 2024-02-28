@@ -30,7 +30,7 @@ const LinkItem = ({
       href={href}
       passHref
       scroll
-      className={`py-2 px-4 rounded-lg ${inactiveColor} ${
+      className={`py-2 px-4 rounded-lg hover:underline hover:underline-offset-4 ${inactiveColor} ${
         active ? "bg-teal-500" : ""
       } ${className}`}
       target={target}
@@ -56,7 +56,15 @@ const Navbar = ({ path }: NavbarProps) => {
           </h1>
         </div>
 
-        <div className="hidden md:flex md:flex-grow md:justify-between">
+        <div className="hidden md:flex md:flex-grow md:w-auto">
+          <LinkItem
+            href="https://nextjs-blog-app-gamma-one.vercel.app/yuichi_nakamura"
+            path={path}
+            target="_blank"
+            className="inline-flex items-center gap-4"
+          >
+            Blog
+          </LinkItem>
           <LinkItem
             href="https://github.com/nakamurau1/homepage"
             path={path}
@@ -80,9 +88,16 @@ const Navbar = ({ path }: NavbarProps) => {
       <div
         className={`${isMenuOpen ? "flex" : "hidden"} flex-col md:hidden mt-3`}
       >
+        <LinkItem
+          href="https://nextjs-blog-app-gamma-one.vercel.app/yuichi_nakamura"
+          path={path}
+          target="_blank"
+          className="inline-flex items-center gap-4"
+        >
+          Blog
+        </LinkItem>
         <LinkItem href="https://github.com/nakamurau1/homepage" target="_blank">
-          <IoLogoGithub className="inline mr-2" />
-          Source
+          View Source
         </LinkItem>
       </div>
     </nav>
